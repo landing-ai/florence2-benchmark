@@ -13,3 +13,16 @@ https://github.com/vllm-project/vllm/tree/main/benchmarks
 - it generates random florence2 requests using images in a folder
 - the requests can be generated with an input interval parameter
 - it measures latency, throughput, etc
+
+
+Start the ray server with cmd:
+
+```
+serve run serve_config.yaml
+```
+
+Run benchmark against the ray server with cmd:
+
+```
+python benchmark_serving.py --images-dir PATH_OF_DATA_DIR --request-rate 7.22 --num-prompts 500
+```
